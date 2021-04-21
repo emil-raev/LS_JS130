@@ -1,5 +1,6 @@
-//'use strict';
-let o = 1;
-function o() { }
-//var o = 2;
-console.log(o);
+function startCounting() {
+  let count = 1;
+  setInterval(() => console.log(count++), 1000);
+}
+
+startCounting();

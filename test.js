@@ -1,6 +1,16 @@
-function startCounting() {
-  let count = 1;
-  setInterval(() => console.log(count++), 1000);
+function foo() {
+  let name = "Pete";
+  return function () {
+    console.log(name);
+  };
 }
 
-startCounting();
+let printPete = foo();
+
+function foo() {
+  let bar = 1;
+  function baz() {
+    let bak = 2;
+    printPete(); // Pete
+  }
+}
